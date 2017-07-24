@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>DLS-RTC-Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body>
+    <div class="center-box" id="beforeLoginUi">
+      <form class="m-t" role="form">
+        <div class="form-group">
+          <input type="username" class="form-control" placeholder="Username" required id="username">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Room Name" required id="currentRoom">
+        </div>
+        <button type="submit" class="btn btn-primary block full-width m-b" id="connectButton">Login</button>
+      </form>
+    </div>
+
+    <div class="row" id="afterLoginUi" style="display:none">
+      <div class="col-lg-6 offset-md-2">
+        <h3>Chat UI</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter Message" required id="messageBox">
+        </div>
+        <button id="sendMessage" type="submit" class="btn btn-primary block full-width m-b">Send</button>
+      </div>
+      <div class="col-lg-4">
+        <h3>Online Users</h3><span><a href="#" id="disconnectButton">disconnect</a></span>
+        <div id="onlineUsers">
+        </div>
+      </div>
+    </div>
+    <div class="row" >
+      <div id="messageViewer" class="offset-md-2 col-lg-6"> </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.12.0.min.js"></script>
+
+    <script src="js/init.js"></script>
+  </body>
+</html>
